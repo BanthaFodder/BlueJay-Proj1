@@ -1,1 +1,70 @@
 
+import java.io.*;
+import java.util.*;
+public class tester
+{
+    public static void main (String args[])
+    {
+        Scanner clas = new Scanner (System.in);
+        boolean play= true;
+        do
+        {
+        System.out.println("                                      >Military Class Selector<");
+        System.out.println(" ");
+        System.out.println("1. Are you...");
+        System.out.println("A)stealth");
+        System.out.println("B)Shoot'em up dude");
+        System.out.println("C)blow'em up kind of guy");
+        String a = clas.nextLine();
+        System.out.println(" ");
+        System.out.println("2. Do you like...");
+        System.out.println("A)Long ranged weapons");
+        System.out.println("B)Heavy weapons");
+        System.out.println("C)Rockets");
+        String b = clas.nextLine();
+        System.out.println("Do you like...");
+        System.out.println("A)Clean kills");
+        System.out.println("B)The sound of bullet shells hitting the ground");
+        System.out.println("C)The sound of \"BOOM");
+        String c = clas.nextLine();
+        if (a.equalsIgnoreCase("A")&&(b.equalsIgnoreCase("A")&&(c.equalsIgnoreCase("A"))))
+        {
+            System.out.println("You are a Sniper.!");
+        }
+        if (a.equalsIgnoreCase("B")&&(b.equalsIgnoreCase("B")&&(c.equalsIgnoreCase("B"))))
+        {
+            System.out.println("You are a Heavy Gunner.!");
+        }
+        if (a.equalsIgnoreCase("C")&&(b.equalsIgnoreCase("C")&&(c.equalsIgnoreCase("C"))))
+        {
+            System.out.println("You are a Bomber.!");
+        }
+        if (a.equalsIgnoreCase("A")&&(b.equalsIgnoreCase("B")&&(c.equalsIgnoreCase("B"))))
+        {
+            System.out.println("You are a messy thief.!");
+        }
+        if (a.equalsIgnoreCase("A")&&(b.equalsIgnoreCase("C")&&(c.equalsIgnoreCase("C"))))
+        {
+            System.out.println("You are a Silent Bomber.!");
+        }
+        if (a.equalsIgnoreCase("A")&&(b.equalsIgnoreCase("B")||(b.equalsIgnoreCase("C")&&(c.equalsIgnoreCase("C")||c.equalsIgnoreCase("B")))))
+        {
+            System.out.println("You are an Average Soldier.!");
+        }
+        if (a.equalsIgnoreCase("B")&&(b.equalsIgnoreCase("A")&&(c.equalsIgnoreCase("A"))))
+        {
+            System.out.println("You are a Crazy Sniper");
+        }
+        System.out.println("Would you like to continue? Y/N");
+        String cont= clas.nextLine();
+        if(cont.equalsIgnoreCase("Y"))
+        {
+            play=true;
+        }
+        else
+        {
+            play=false;
+        }
+    }while(play==true);
+    }
+}
